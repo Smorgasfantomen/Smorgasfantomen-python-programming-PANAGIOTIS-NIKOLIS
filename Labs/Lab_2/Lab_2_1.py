@@ -6,7 +6,7 @@ import matplotlib.ticker as ticker
 # Datafil:
 datapath = r"D:\Backup\Dokument\Utbildning\IT-Högskolan\Programmering Python\Panagiotis Github\Smorgasfantomen-python-programming-PANAGIOTIS-NIKOLIS\Labs\Lab_2\datapoints.txt"
 
-# Funktion för att räkna ut avstånd mellan två punkter:
+# Funktion för att räkna ut avstånd mellan två punkter. Har blankt lånat denna av Vilma.
 def eucdist(p0, p1):
     return np.sqrt((p0[0]-p1[0])**2 + (p0[1]-p1[1])**2)
 
@@ -105,7 +105,7 @@ if newpichu.size > 0:
 if newpikachu.size > 0:
     plt.scatter(newpikachu[:, 0], newpikachu[:, 1], color='orange', label='Probably a Pikachu', edgecolors='black')
 
-# Gör att varje axel får "cm"
+# Gör att varje axel får "cm". Har fått denna förklarad av Copilot.
 plt.gca().xaxis.set_major_formatter(ticker.FuncFormatter(lambda x, _: f"{x:.0f} cm"))
 plt.gca().yaxis.set_major_formatter(ticker.FuncFormatter(lambda y, _: f"{y:.0f} cm"))
 
